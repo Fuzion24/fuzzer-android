@@ -21,7 +21,6 @@ while [ 1 ]; do
     if [ $is_online -ne 1 ]; then
 	exit
     fi
-    
-    timeout 180 adb -s $DEVICE shell su -c "cat /proc/kmsg" > kmsg
+    gtimeout 180 adb -s $DEVICE shell su -c "cat /proc/kmsg" > kmsg
 
 done
